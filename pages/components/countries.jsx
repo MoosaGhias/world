@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import styles from '../../styles/Countries.module.css';
 
+
 const Countries = () => {
     // const countryData = fetch('https://api.first.org/data/v1/countries').then(response => response.json())
 
@@ -27,7 +28,7 @@ const Countries = () => {
         <div>
             <div className = {styles.header}>
                 <Link href='/'>
-                    <img className={styles.homeEarth} src = '/world.jpeg' alt = 'You got this' ></img>
+                    <p className= {styles.back}>Home</p>
                     
                 </Link>
             </div>

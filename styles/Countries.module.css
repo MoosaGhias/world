@@ -1,11 +1,5 @@
-.homeEarth{
-    height: 50px;
-    width: 50px;
-    display: inline-block;
+.back{
     margin-left: 10px;
-    margin-top: 5px;
-    /* font-weight: bold; */
-
 }
 .header{
     background-color: white;
