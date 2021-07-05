@@ -37,7 +37,7 @@ const Countries = () => {
                 <h1 className={styles.hOne}>Countries of the World</h1>
                 <div>
                     {data.map(name => {
-                        return <ul className={styles.list} key={name}> {name}</ul>
+                        return <a href={'https://en.wikipedia.org/wiki/' + name} > <ul className={styles.list} key={name}> {name}</ul> </a>
                     })}
                 </div>
             </div>
