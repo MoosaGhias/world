@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import styles from '../../styles/Countries.module.css';
-
+import Searchbar from './/searchbar'
 
 const Countries = () => {
     // const countryData = fetch('https://api.first.org/data/v1/countries').then(response => response.json())
 
     const [data, setData] = useState([]);
+    const [searchString, setSearchString] = useState('');
+
 
     useEffect(() => {
         fetch('https://restcountries.eu/rest/v2/').then(response => {
@@ -25,7 +27,7 @@ const Countries = () => {
     }, []);
 
     return (
-        <div>
+        <div className={styles.mainback}>
             <div className = {styles.header}>
                 <Link href='/'>
                     <p className= {styles.back}>Home</p>
@@ -33,10 +35,13 @@ const Countries = () => {
                 </Link>
             </div>
             
-            <div className={styles.mainback}>
+            <div>
                 <h1 className={styles.hOne}>Countries of the World</h1>
+                <Searchbar searchString={searchString} setSearchString={setSearchString}/>
                 <div>
-                    {data.map(name => {
+                    {data.filter((countryName)=>{
+                        return countryName.toLowerCase().indexOf(searchString.toLowerCase()) >= 0
+                    }).map(name => {
                         return <a href={'https://en.wikipedia.org/wiki/' + name} > <ul className={styles.list} key={name}> {name}</ul> </a>
                     })}
                 </div>
