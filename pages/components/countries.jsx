@@ -42,7 +42,7 @@ const Countries = () => {
                     {data.filter((countryName)=>{
                         return countryName.toLowerCase().indexOf(searchString.toLowerCase()) >= 0
                     }).map(name => {
-                        return <a href={'https://en.wikipedia.org/wiki/' + name} > <ul className={styles.list} key={name}> {name}</ul> </a>
+                        return <a key={name} href={'https://en.wikipedia.org/wiki/' + name} > <ul className={styles.list} key={name}> {name}</ul> </a>
                     })}
                 </div>
             </div>
