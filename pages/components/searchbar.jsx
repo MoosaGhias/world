@@ -3,11 +3,11 @@ import styles from '../../styles/Search.module.css';
 
 
 
-const Searchbar = ({searchString, setSearchString}) => {
+const Searchbar = ({searchStringValue, setSearchString}) => {
 
     return(
         <form className="search" >
-            <input name="query" className={styles.searchBar} placeholder="Search" type="search" value={searchString} onChange={(event)=>setSearchString(event.target.value)} />
+            <input name="query" className={styles.searchBar} placeholder="Search" type="search" value={searchStringValue} onChange={(event)=>setSearchString(event.target.value)} />
         </form>
     )
 

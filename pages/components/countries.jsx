@@ -22,6 +22,7 @@ const Countries = () => {
             //name:, toplevel:, alphacode:
             const countryNames = countryKeys.map(key => countriesData[key].name)
             setData(countryNames);
+            
 
         });
     }, []);
@@ -37,16 +38,16 @@ const Countries = () => {
             
             <div>
                 <h1 className={styles.hOne}>Countries of the World</h1>
-                <Searchbar searchString={searchString} setSearchString={setSearchString}/>
+                <Searchbar searchStringValue={searchString} setSearchString={setSearchString}/>
                 <div>
                     {data.filter((countryName)=>{
                         return countryName.toLowerCase().indexOf(searchString.toLowerCase()) >= 0
                     }).map(name => {
-                        return <a key={name} href={'https://en.wikipedia.org/wiki/' + name} > <ul className={styles.list} key={name}> {name}</ul> </a>
+                        return <Link href={`/components/` + name} key={name}><ul className={styles.list}>{name}</ul></Link>
                     })}
                 </div>
             </div>
-            
+
 
         </div>
 
