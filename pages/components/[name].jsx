@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import getConfig from 'next/config';
-import styles from '../../styles/name.module.css';
+import styles from '../../styles/Name.module.css';
 import Header from './header';
 
 
