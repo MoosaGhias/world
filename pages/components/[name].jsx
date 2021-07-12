@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import getConfig from 'next/config';
+import styles from '../../styles/name.module.css';
+import Header from './header';
+
 
 
 const { publicRuntimeConfig } = getConfig()
@@ -21,9 +24,11 @@ export async function getServerSideProps(context){
 const Info = ({ country }) => {
     // console.log(country[0].name)
     return (
+        
         <div>
-            <h1>Country Name</h1>
-            <h1 key={country[0].name}>{country[0].name}</h1>
+            <Header />
+            <h1 className={styles.name}>Country Name</h1>
+            <h2 key={country[0].name} className={styles.name}>{country[0].name}</h2>
         </div>
     )
 }

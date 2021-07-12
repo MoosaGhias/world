@@ -1,0 +1,14 @@
+.header{
+    background-color: white;
+    height: 70px;
+    width: 100%;
+    display:inline-block;
+    box-shadow: 10px 0px 5px black;
+
+}
+
+.back{
+    margin-left: 20px;
+    margin-top: 30px;
+    font-weight: bold;
+}

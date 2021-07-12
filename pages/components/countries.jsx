@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import styles from '../../styles/Countries.module.css';
-import Searchbar from './/searchbar'
+import Searchbar from './/searchbar';
+import Header from './/header';
 
 const Countries = () => {
     // const countryData = fetch('https://api.first.org/data/v1/countries').then(response => response.json())
@@ -29,12 +30,7 @@ const Countries = () => {
 
     return (
         <div className={styles.mainback}>
-            <div className = {styles.header}>
-                <Link href='/'>
-                    <p className= {styles.back}>Home</p>
-                    
-                </Link>
-            </div>
+            <Header />
             
             <div>
                 <h1 className={styles.hOne}>Countries of the World</h1>
